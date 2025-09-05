@@ -20,6 +20,7 @@ if data.raw["ammo-turret"]["gun-turret"] then
       pick_sound = item_sounds.turret_inventory_pickup,
       drop_sound = item_sounds.turret_inventory_move,
       place_result = "snouz_long_electric_gun_turret",
+      default_import_location = "fulgora",
       stack_size = 50,
       weight = 20 * kg
     },
@@ -29,6 +30,7 @@ if data.raw["ammo-turret"]["gun-turret"] then
       name = "snouz_long_electric_gun_turret",
       icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
       category = "electromagnetics",
+      always_show_made_in = true,
       energy_required = 16,
       enabled = false,
       allow_productivity = false,
