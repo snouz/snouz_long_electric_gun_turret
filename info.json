@@ -1,0 +1,13 @@
+{
+  "name": "snouz_long_electric_gun_turret",
+  "version": "1.0.0",
+  "title": "Focussed gun turrets",
+  "author": "snouz",
+  "homepage": "https://github.com/snouz/snouz_long_electric_gun_turret",
+  "factorio_version": "2.0",
+  "description": "This gun turret upgrade has twice the range and speed, but a quarter of the angle coverage and consumes electricity.",
+  "dependencies": [
+    "base",
+    "space-age"
+  ]
+}

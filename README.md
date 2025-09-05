@@ -1,1 +1,1 @@
-# snouz_long_electric_gun_turret
+Takes from code bits from Electric Gun Turret by orbital917
