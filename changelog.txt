@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-09-06
+  Changes:
+    - Glows red when power but no ammo
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-Date: 2025-09
+Date: 2025-09-05
   Changes:
     - Default import location: Fulgora
     - Show that recipe is made in EM plants

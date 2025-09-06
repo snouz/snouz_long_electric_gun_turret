@@ -107,8 +107,9 @@ if data.raw["ammo-turret"]["gun-turret"] then
     base_visualisation =
     {
       {
-        draw_when_has_energy = true,
+        --draw_when_has_energy = true,
         draw_when_no_energy = false,
+        draw_when_no_ammo = false,
         render_layer = "object",
         animation =
         {
@@ -116,6 +117,29 @@ if data.raw["ammo-turret"]["gun-turret"] then
           {
             {
               filename = ENTITYPATH .. "gun-turret/gun-turret-base-glow.png",
+              priority = "high",
+              width = 158,
+              height = 158,
+              --shift = util.by_pixel(0.5, -1),
+              scale = 0.5,
+              draw_as_glow = true,
+              blend_mode = "additive",
+            },
+          }
+        }
+      },
+      {
+        --draw_when_has_energy = true,
+        --draw_when_no_energy = false,
+        draw_when_no_energy = false,
+        draw_when_has_ammo = false,
+        render_layer = "object",
+        animation =
+        {
+          layers =
+          {
+            {
+              filename = ENTITYPATH .. "gun-turret/gun-turret-base-glow-noammo.png",
               priority = "high",
               width = 158,
               height = 158,
