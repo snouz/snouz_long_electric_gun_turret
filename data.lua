@@ -102,6 +102,9 @@ if data.raw["ammo-turret"]["gun-turret"] then
   gun_turret.max_health = 500 --400
   gun_turret.attacking_speed = 0.9 --0.5
 
+  gun_turret.turret_base_has_rotation = true
+  gun_turret.collision_box = {{-0.71, -0.7}, {0.71, 0.7}}
+  
   gun_turret.graphics_set =
   {
     base_visualisation =
