@@ -104,6 +104,8 @@ if data.raw["ammo-turret"]["gun-turret"] then
 
   gun_turret.turret_base_has_rotation = true
   gun_turret.collision_box = {{-0.71, -0.7}, {0.71, 0.7}}
+  gun_turret.fast_replaceable_group = "snouz_long_electric_gun_turret"
+  gun_turret.next_upgrade = nil
   
   gun_turret.graphics_set =
   {
