@@ -199,7 +199,24 @@ if data.raw["ammo-turret"]["gun-turret"] then
   gun_turret.attack_parameters.cooldown = 3 --6
   gun_turret.attack_parameters.projectile_creation_distance = 1.85 --1.39375,
   gun_turret.automated_ammo_count = 15 --10,
-  --gun_turretturret_base_has_direction = true
+  gun_turret.turret_base_has_direction = true
+
+
+  gun_turret.circuit_connector = circuit_connector_definitions.create_vector
+  (
+    universal_connector_template,
+    {
+      { variation = 17, main_offset = util.by_pixel( -21, 1), shadow_offset = util.by_pixel( -12, 10), show_shadow = true },
+      { variation = 17, main_offset = util.by_pixel( -21, 1), shadow_offset = util.by_pixel( -12, 10), show_shadow = true },
+      { variation = 17, main_offset = util.by_pixel( -21, 1), shadow_offset = util.by_pixel( -12, 10), show_shadow = true },
+      { variation = 17, main_offset = util.by_pixel( -21, 1), shadow_offset = util.by_pixel( -12, 10), show_shadow = true }
+    },
+    true
+  )
+
+
+
+
   gun_turret.attack_parameters.sound = {
     variations = sound_variations("__snouz_long_electric_gun_turret__/sound/shot", 16, 0.4, {volume_multiplier("main-menu", 0.9), volume_multiplier("space-platform", 0.5)}),
     aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
