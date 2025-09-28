@@ -7,93 +7,175 @@ local graphics = "__snouz_long_electric_gun_turret__/graphics"
 local ENTITYPATH = graphics .. "/entity/"
 
 if data.raw["ammo-turret"]["gun-turret"] then
-
-  data:extend(
-  {
+  if mods["space-age"] then
+    data:extend(
     {
-      type = "item",
-      name = "snouz_long_electric_gun_turret",
-      icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
-      subgroup = "turret",
-      order = "b[turret]-az[gun-turret]",
-      inventory_move_sound = item_sounds.turret_inventory_move,
-      pick_sound = item_sounds.turret_inventory_pickup,
-      drop_sound = item_sounds.turret_inventory_move,
-      place_result = "snouz_long_electric_gun_turret",
-      default_import_location = "fulgora",
-      stack_size = 50,
-      weight = 20 * kg
-    },
+      {
+        type = "item",
+        name = "snouz_long_electric_gun_turret",
+        icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
+        subgroup = "turret",
+        order = "b[turret]-az[gun-turret]",
+        inventory_move_sound = item_sounds.turret_inventory_move,
+        pick_sound = item_sounds.turret_inventory_pickup,
+        drop_sound = item_sounds.turret_inventory_move,
+        place_result = "snouz_long_electric_gun_turret",
+        default_import_location = "fulgora",
+        stack_size = 50,
+        weight = 20 * kg
+      },
 
-    {
-      type = "recipe",
-      name = "snouz_long_electric_gun_turret",
-      icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
-      category = "electromagnetics",
-      always_show_made_in = true,
-      energy_required = 16,
-      enabled = false,
-      allow_productivity = false,
-      ingredients =
       {
-        {type = "item", name = "gun-turret", amount = 2},
-        {type = "item", name = "supercapacitor", amount = 1},
-        {type = "item", name = "radar", amount = 1},
-        {type = "item", name = "tungsten-carbide", amount = 1},
-      },
-      results = {
-        {type = "item", name = "snouz_long_electric_gun_turret", amount = 1},
-      },
-      --crafting_machine_tint =
-      --{
-      --  primary = {r = 0.460, g = 0.188, b = 0.649, a = 1.000}, -- #752fa5ff
-      --  secondary = {r = 0.489, g = 0.484, b = 0.381, a = 1.000}, -- #7c7b61ff
-      --  tertiary = {r = 0.196, g = 0.101, b = 0.101, a = 1.000}, -- #311919ff
-      --  quaternary = {r = 0.518, g = 0.539, b = 0.993, a = 1.000}, -- #8489fdff
-      --}
-    },
-
-    {
-      type = "technology",
-      name = "snouz_long_electric_gun_turret",
-      icon = graphics .. "/technology/snouz_long_electric_gun_turret.png",
-      icon_size = 256,
-      effects =
-      {
-        {
-          type = "unlock-recipe",
-          recipe = "snouz_long_electric_gun_turret"
-        }
-      },
-      prerequisites = {"tungsten-carbide", "electromagnetic-plant"},
-      unit =
-      {
-        count = 2000,
+        type = "recipe",
+        name = "snouz_long_electric_gun_turret",
+        icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
+        category = "electromagnetics",
+        always_show_made_in = true,
+        energy_required = 16,
+        enabled = false,
+        allow_productivity = false,
         ingredients =
         {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"military-science-pack", 1},
-          {"chemical-science-pack", 1},
-          --{"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
-          {"electromagnetic-science-pack", 1},
-          --{"agricultural-science-pack", 1},
-          --{"cryogenic-science-pack", 1},
-          --{"promethium-science-pack", 1}
-          
+          {type = "item", name = "gun-turret", amount = 2},
+          {type = "item", name = "supercapacitor", amount = 1},
+          {type = "item", name = "radar", amount = 1},
+          {type = "item", name = "tungsten-carbide", amount = 1},
         },
-        time = 60
+        results = {
+          {type = "item", name = "snouz_long_electric_gun_turret", amount = 1},
+        },
+        --crafting_machine_tint =
+        --{
+        --  primary = {r = 0.460, g = 0.188, b = 0.649, a = 1.000}, -- #752fa5ff
+        --  secondary = {r = 0.489, g = 0.484, b = 0.381, a = 1.000}, -- #7c7b61ff
+        --  tertiary = {r = 0.196, g = 0.101, b = 0.101, a = 1.000}, -- #311919ff
+        --  quaternary = {r = 0.518, g = 0.539, b = 0.993, a = 1.000}, -- #8489fdff
+        --}
       },
-    },
-  })
+
+      {
+        type = "technology",
+        name = "snouz_long_electric_gun_turret",
+        icon = graphics .. "/technology/snouz_long_electric_gun_turret.png",
+        icon_size = 256,
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "snouz_long_electric_gun_turret"
+          }
+        },
+        prerequisites = {"tungsten-carbide", "electromagnetic-plant"},
+        unit =
+        {
+          count = 2000,
+          ingredients =
+          {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"military-science-pack", 1},
+            {"chemical-science-pack", 1},
+            --{"production-science-pack", 1},
+            {"utility-science-pack", 1},
+            {"space-science-pack", 1},
+            {"metallurgic-science-pack", 1},
+            {"electromagnetic-science-pack", 1},
+            --{"agricultural-science-pack", 1},
+            --{"cryogenic-science-pack", 1},
+            --{"promethium-science-pack", 1}
+            
+          },
+          time = 60
+        },
+      },
+    })
+  else
+    data:extend(
+    {
+      {
+        type = "item",
+        name = "snouz_long_electric_gun_turret",
+        icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
+        subgroup = "turret",
+        order = "b[turret]-az[gun-turret]",
+        inventory_move_sound = item_sounds.turret_inventory_move,
+        pick_sound = item_sounds.turret_inventory_pickup,
+        drop_sound = item_sounds.turret_inventory_move,
+        place_result = "snouz_long_electric_gun_turret",
+        --default_import_location = "fulgora",
+        stack_size = 50,
+      },
+
+      {
+        type = "recipe",
+        name = "snouz_long_electric_gun_turret",
+        icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
+        category = "crafting",
+        always_show_made_in = true,
+        energy_required = 16,
+        enabled = false,
+        allow_productivity = false,
+        ingredients =
+        {
+          {type = "item", name = "gun-turret", amount = 2},
+          {type = "item", name = "battery", amount = 1},
+          {type = "item", name = "radar", amount = 1},
+          {type = "item", name = "steel-plate", amount = 4},
+        },
+        results = {
+          {type = "item", name = "snouz_long_electric_gun_turret", amount = 1},
+        },
+        --crafting_machine_tint =
+        --{
+        --  primary = {r = 0.460, g = 0.188, b = 0.649, a = 1.000}, -- #752fa5ff
+        --  secondary = {r = 0.489, g = 0.484, b = 0.381, a = 1.000}, -- #7c7b61ff
+        --  tertiary = {r = 0.196, g = 0.101, b = 0.101, a = 1.000}, -- #311919ff
+        --  quaternary = {r = 0.518, g = 0.539, b = 0.993, a = 1.000}, -- #8489fdff
+        --}
+      },
+
+      {
+        type = "technology",
+        name = "snouz_long_electric_gun_turret",
+        icon = graphics .. "/technology/snouz_long_electric_gun_turret.png",
+        icon_size = 256,
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "snouz_long_electric_gun_turret"
+          }
+        },
+        prerequisites = {"military-4"},
+        unit =
+        {
+          count = 1700,
+          ingredients =
+          {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"military-science-pack", 3},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
+            {"utility-science-pack", 1},
+            --{"space-science-pack", 1},
+            --{"metallurgic-science-pack", 1},
+            --{"electromagnetic-science-pack", 1},
+            --{"agricultural-science-pack", 1},
+            --{"cryogenic-science-pack", 1},
+            --{"promethium-science-pack", 1}
+            
+          },
+          time = 60
+        },
+      },
+    })
+  end
+
  
 
 
   local gun_turret = table.deepcopy(data.raw["ammo-turret"]["gun-turret"])
-
 
   gun_turret.name = "snouz_long_electric_gun_turret"
   gun_turret.icon = graphics .. "/icons/snouz_long_electric_gun_turret.png"
