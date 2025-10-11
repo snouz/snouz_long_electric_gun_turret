@@ -65,7 +65,7 @@ if data.raw["ammo-turret"]["gun-turret"] then
             recipe = "snouz_long_electric_gun_turret"
           }
         },
-        prerequisites = {"tungsten-carbide", "electromagnetic-plant"},
+        prerequisites = {"metallurgic-science-pack", "electromagnetic-science-pack"},
         unit =
         {
           count = 2000,
