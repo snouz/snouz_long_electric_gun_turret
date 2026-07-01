@@ -29,7 +29,7 @@ if data.raw["ammo-turret"]["gun-turret"] then
         type = "recipe",
         name = "snouz_long_electric_gun_turret",
         icon = graphics .. "/icons/snouz_long_electric_gun_turret.png",
-        category = "electromagnetics",
+        categories = {"electromagnetics"},
         always_show_made_in = true,
         energy_required = 16,
         enabled = false,
